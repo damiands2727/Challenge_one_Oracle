@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="titulo">Código secreto</h1>
+  <!-- aca tuve qye hacer varios cambios, resaltando el cambiar el "type" submit por un "button" porque sino se refresca la pagina--> 
+  <main class="main">
+    <section class="form box">
+      <form action="">
+        <h2 id="">Mensaje a encriptar:</h2>
+        <br>
+        <label for="input-texto">Solo letras minúsculas, sin acento</label>
+        <!--aca tambien tuve que agregar los "onclick" para disparar las funciones-->
+        <input class="text-input" type="text" name="input-texto" id="input-texto" onchange="this.value=this.value.toLowerCase();" placeholder="Ingrese el texto aqui">
+        <input class="btn" type="button" onclick= "encriptador()" value="Encriptar!" id="btn-encriptar">
+        <input class="btn" type="button" onclick= "desencriptador()" value="Desencriptar!" id="btn-desencriptar">
+        <input class="btn" type="button" onclick= "resetear()" value="Resetear!" id="btn-reset">
+      </form>
+    </section>
+
+    <section class="msg box">
+      <h2 id="">Mensaje encriptado:</h2>
+      <!--un par de "br" para que quedaran alineados los cuadrados-->
+      <br>
+      <br>
+      <input class="text-input" type="text" id="msg" placeholder="Resultado" ></input>
+      <input class="btn"onclick="copiarPorta()" type="submit" value="Copiar" id="btn-copy">
+      <input class="btn"onclick="copiarpegardes()" type="submit" value="Copiar, Pegar y Desencriptar" id="btn-copy">      
+    </section>
+
+
+      
+    <!--aca agregue la parte secreta del challenge que figuraba en el trello-->
+
+  </main>
+    <div class = "secret">
+    <input class="btn" onclick= "msgSecreto()" type="submit" value= "Mensaje secreto!" id="btn-secret">
+    </div>
+
+    <footer class="foot">
+      <p>Primer desafio de Oracle y Alura LATAM | Damián Guido Stella | Enero de 2022 </p>
+  </footer>
+
+    
+  <script src="script.js"></script>
+</body>
+</html>
