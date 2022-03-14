@@ -60,6 +60,7 @@ body {
   border-radius: 0.5em;
   margin-left: 50%;
   transform: translateX(-50%);
+  margin-bottom: 50px;
 }
 
 .foot {
